@@ -1,0 +1,26 @@
+{
+  "name": "obsidian-equation-editor",
+  "version": "1.0.0",
+  "description": "MathLive equation editor blocks for Obsidian",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production"
+  },
+  "dependencies": {
+    "mathlive": "0.110.0"
+  },
+  "devDependencies": {
+    "@codemirror/state": "^6.5.0",
+    "@codemirror/view": "^6.38.6",
+    "@types/node": "^22.10.2",
+    "builtin-modules": "^4.0.0",
+    "esbuild": "^0.24.2",
+    "obsidian": "latest",
+    "typescript": "^5.7.2"
+  },
+  "allowScripts": {
+    "esbuild@0.24.2": true
+  }
+}
