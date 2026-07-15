@@ -1,3 +1,5 @@
+This was pretty much made entirely with claude.
+
 # Equation Editor
 
 Turns ` ```mathlive ` fenced code blocks into live [MathLive](https://cortexjs.io/mathlive/)
