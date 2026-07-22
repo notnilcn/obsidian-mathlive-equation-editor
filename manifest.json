@@ -1,0 +1,9 @@
+{
+  "id": "obsidian-equation-editor",
+  "name": "Equation Editor",
+  "version": "1.0.0",
+  "minAppVersion": "1.12.0",
+  "description": "Turn ```mathlive code blocks into live MathLive equation editors, with MathLive's native commands and keybindings.",
+  "author": "notnilcn",
+  "isDesktopOnly": false
+}

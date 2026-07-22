@@ -1,0 +1,83 @@
+/* `cursor` because the whole block is a click target for the field, not just the field. */
+.mathlive-block {
+  display: flex;
+  padding: 0.5em 0;
+  cursor: text;
+  background-color: var(--code-background, #242424);
+  border-radius: var(--radius-m);
+}
+
+.mathlive-block-centre {
+  justify-content: center;
+}
+
+.mathlive-block math-field {
+  min-width: 4em;
+  padding: 0.25em 0.4em;
+  border: 1px solid transparent;
+  border-radius: var(--radius-s);
+  background: transparent;
+  color: var(--text-normal);
+  font-size: 1.1em;
+}
+
+.mathlive-block math-field:hover {
+  border-color: var(--background-modifier-border);
+}
+
+.mathlive-block math-field:focus,
+.mathlive-block math-field:focus-within {
+  border-color: var(--interactive-accent);
+  outline: none;
+}
+
+/*
+ * Reveal MathLive's keyboard and menu toggles only on hover or focus.
+ *
+ * `display`, not `visibility`: MathLive's render.ts sets `style.display = 'none'`
+ * inline when it wants a toggle hidden anyway (read-only field, or a field under
+ * 50px wide) and `style.display = ''` otherwise, so an inline `none` still beats
+ * the rule below and its own logic is preserved.
+ */
+.mathlive-block math-field::part(virtual-keyboard-toggle),
+.mathlive-block math-field::part(menu-toggle) {
+  display: none;
+}
+
+.mathlive-block math-field:hover::part(virtual-keyboard-toggle),
+.mathlive-block math-field:hover::part(menu-toggle),
+.mathlive-block math-field:focus-within::part(virtual-keyboard-toggle),
+.mathlive-block math-field:focus-within::part(menu-toggle) {
+  display: flex;
+}
+
+.mathlive-error {
+  color: var(--text-error);
+  white-space: pre-wrap;
+  font-size: var(--font-smaller);
+}
+
+/* MathLive's own theming hooks, mapped onto Obsidian's palette. */
+.mathlive-block math-field {
+  --caret-color: var(--text-normal);
+  --selection-background-color: var(--text-selection);
+  --selection-color: var(--text-normal);
+  --contains-highlight-background-color: var(--background-modifier-hover);
+  --placeholder-color: var(--text-faint);
+  --smart-fence-color: var(--text-muted);
+}
+
+.mathlive-symbol-mode-status {
+  color: var(--interactive-accent);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+}
+
+.mathlive-symbol-mapping-row .setting-item-control {
+  flex-wrap: wrap;
+}
+
+.mathlive-symbol-mapping-row .setting-item-control input[type='text'] {
+  flex: 1 1 0;
+  min-width: 4em;
+}

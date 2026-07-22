@@ -1,0 +1,33 @@
+{
+  "virtualKeyboardPolicy": "manual",
+  "registerPaletteCommands": true,
+  "centre": true,
+  "mathSymbolMappings": [
+    {
+      "id": "mrgnjqb3-1",
+      "name": "Pi",
+      "trigger": "p",
+      "insert": "\\pi"
+    },
+    {
+      "id": "mrgnk4uk-2",
+      "name": "Partial",
+      "trigger": "ctrl+d",
+      "insert": "\\partial"
+    },
+    {
+      "id": "test-cdot",
+      "name": "Cdot",
+      "trigger": "c+d",
+      "insert": "\\cdot"
+    },
+    {
+      "id": "mrwhozhw-2",
+      "name": "Chi",
+      "trigger": "c",
+      "insert": "\\chi"
+    }
+  ],
+  "oneShotTrigger": "`",
+  "showModeNotifications": false
+}
